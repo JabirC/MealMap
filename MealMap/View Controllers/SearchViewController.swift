@@ -199,4 +199,12 @@ func edamamURL(searchText: String) -> URL {
 
 
 func parse(data: Data) -> [SearchResult] {
+  do {
+    let decoder = JSONDecoder()
+    let result = try decoder.decode(
+      ResultArray.self, from: data)
+    return result.hits
+  } catch {
+    print("JSON Error: \(error)")
+return [] }
 }
