@@ -188,3 +188,13 @@ UITableViewDataSource {
 }
 
 
+// MARK: - Helper Methods
+func edamamURL(searchText: String) -> URL {
+    let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+    var urlString = "https://api.edamam.com/api/recipes/v2?type=public&q="
+    urlString = urlString + encodedText + "&app_id=34fcf9ae&app_key=52660009ab7340e7b0cf21ea3849cb6d"
+    let url = URL(string: urlString)
+    return url!
+}
+
+
