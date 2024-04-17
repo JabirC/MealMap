@@ -198,3 +198,5 @@ func edamamURL(searchText: String) -> URL {
 }
 
 
+func parse(data: Data) -> [SearchResult] {
+}
