@@ -2,7 +2,7 @@
 //  Functions.swift
 //  MealMap
 //
-//  Created by Jabir Chowdhury on 5/17/23.
+//  Created by Jabir Chowdhury
 //
 
 import Foundation
