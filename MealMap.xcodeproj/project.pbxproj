@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC2D8BA42A0C1D9F00886270 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D8BA32A0C1D9F00886270 /* AppDelegate.swift */; };
+		EC2D8BA62A0C1D9F00886270 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D8BA52A0C1D9F00886270 /* SceneDelegate.swift */; };
+		EC2D8BA82A0C1D9F00886270 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D8BA72A0C1D9F00886270 /* HomeViewController.swift */; };
+		EC2D8BAB2A0C1D9F00886270 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2D8BA92A0C1D9F00886270 /* Main.storyboard */; };
+		EC2D8BAE2A0C1D9F00886270 /* MealMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC2D8BAC2A0C1D9F00886270 /* MealMap.xcdatamodeld */; };
+		EC2D8BB02A0C1DA000886270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2D8BAF2A0C1DA000886270 /* Assets.xcassets */; };
+		EC2D8BB32A0C1DA000886270 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2D8BB12A0C1DA000886270 /* LaunchScreen.storyboard */; };
+		EC2D8BBB2A0C21EB00886270 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D8BBA2A0C21EB00886270 /* SearchViewController.swift */; };
+		EC2D8BBD2A0C485800886270 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D8BBC2A0C485800886270 /* SearchResult.swift */; };
+		EC2D8BBF2A0C4CD700886270 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2D8BBE2A0C4CD700886270 /* SearchResultCell.xib */; };
+		EC2D8BC12A0C53B200886270 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D8BC02A0C53B200886270 /* SearchResultCell.swift */; };
+		EC2D8BC32A0C6E2E00886270 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D8BC22A0C6E2E00886270 /* CalendarViewController.swift */; };
+		EC2D8BC52A13DEC300886270 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2D8BC42A13DEC300886270 /* LoadingCell.xib */; };
+		EC2D8BC72A13E3E300886270 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC2D8BC62A13E3E300886270 /* NothingFoundCell.xib */; };
+		EC66CFA42A14211600F40A69 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC66CFA32A14211600F40A69 /* UIImageView+DownloadImage.swift */; };
+		EC6DB14C2A15B0DF00C5CEAD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6DB14B2A15B0DF00C5CEAD /* SettingsViewController.swift */; };
+		EC6DB1502A15F0E000C5CEAD /* String+SplitArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6DB14F2A15F0E000C5CEAD /* String+SplitArray.swift */; };
+		EC6DB1522A169A3200C5CEAD /* CreateRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6DB1512A169A3200C5CEAD /* CreateRecipeViewController.swift */; };
+		EC6DB1542A16C9AA00C5CEAD /* NutritionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6DB1532A16C9AA00C5CEAD /* NutritionResult.swift */; };
+		ECAF41F82A14871F00300D3E /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF41F62A14871F00300D3E /* IngredientCell.swift */; };
+		ECAF41F92A14871F00300D3E /* IngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAF41F72A14871F00300D3E /* IngredientCell.xib */; };
+		ECAF41FB2A148CF100300D3E /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF41FA2A148CF100300D3E /* DatePickerViewController.swift */; };
+		ECAF41FD2A14C5BA00300D3E /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF41FC2A14C5BA00300D3E /* HudView.swift */; };
+		ECAF41FF2A14C75300300D3E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF41FE2A14C75300300D3E /* Functions.swift */; };
+		ECAF42012A152E6700300D3E /* NothingSavedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECAF42002A152E6700300D3E /* NothingSavedCell.xib */; };
+		ECAF42032A15735000300D3E /* CalendarRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF42022A15735000300D3E /* CalendarRecipeViewController.swift */; };
+		ECD05C952A143FDF00B31414 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD05C942A143FDF00B31414 /* RecipeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC2D8BA02A0C1D9F00886270 /* MealMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2D8BA32A0C1D9F00886270 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC2D8BA52A0C1D9F00886270 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC2D8BA72A0C1D9F00886270 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EC2D8BAA2A0C1D9F00886270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC2D8BAD2A0C1D9F00886270 /* MealMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MealMap.xcdatamodel; sourceTree = "<group>"; };
+		EC2D8BAF2A0C1DA000886270 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC2D8BB22A0C1DA000886270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC2D8BB42A0C1DA000886270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC2D8BBA2A0C21EB00886270 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EC2D8BBC2A0C485800886270 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		EC2D8BBE2A0C4CD700886270 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		EC2D8BC02A0C53B200886270 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		EC2D8BC22A0C6E2E00886270 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		EC2D8BC42A13DEC300886270 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		EC2D8BC62A13E3E300886270 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		EC66CFA32A14211600F40A69 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		EC6DB14B2A15B0DF00C5CEAD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EC6DB14F2A15F0E000C5CEAD /* String+SplitArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SplitArray.swift"; sourceTree = "<group>"; };
+		EC6DB1512A169A3200C5CEAD /* CreateRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecipeViewController.swift; sourceTree = "<group>"; };
+		EC6DB1532A16C9AA00C5CEAD /* NutritionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionResult.swift; sourceTree = "<group>"; };
+		ECAF41F62A14871F00300D3E /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		ECAF41F72A14871F00300D3E /* IngredientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientCell.xib; sourceTree = "<group>"; };
+		ECAF41FA2A148CF100300D3E /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		ECAF41FC2A14C5BA00300D3E /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		ECAF41FE2A14C75300300D3E /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		ECAF42002A152E6700300D3E /* NothingSavedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingSavedCell.xib; sourceTree = "<group>"; };
+		ECAF42022A15735000300D3E /* CalendarRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRecipeViewController.swift; sourceTree = "<group>"; };
+		ECD05C942A143FDF00B31414 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC2D8B9D2A0C1D9F00886270 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC2D8B972A0C1D9F00886270 = {
+			isa = PBXGroup;
+			children = (
+				EC2D8BA22A0C1D9F00886270 /* MealMap */,
+				EC2D8BA12A0C1D9F00886270 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC2D8BA12A0C1D9F00886270 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D8BA02A0C1D9F00886270 /* MealMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC2D8BA22A0C1D9F00886270 /* MealMap */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D8BA32A0C1D9F00886270 /* AppDelegate.swift */,
+				EC2D8BA52A0C1D9F00886270 /* SceneDelegate.swift */,
+				EC2D8BA92A0C1D9F00886270 /* Main.storyboard */,
+				EC2D8BAF2A0C1DA000886270 /* Assets.xcassets */,
+				EC2D8BB12A0C1DA000886270 /* LaunchScreen.storyboard */,
+				EC2D8BB42A0C1DA000886270 /* Info.plist */,
+				EC6DB1552A16DF4200C5CEAD /* View Controllers */,
+				EC6DB1572A16DFD000C5CEAD /* Core Data */,
+				EC6DB1562A16DFAB00C5CEAD /* Cells */,
+				EC6DB1582A16DFF600C5CEAD /* Functions */,
+			);
+			path = MealMap;
+			sourceTree = "<group>";
+		};
+		EC6DB1552A16DF4200C5CEAD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D8BA72A0C1D9F00886270 /* HomeViewController.swift */,
+				EC2D8BC22A0C6E2E00886270 /* CalendarViewController.swift */,
+				EC2D8BBA2A0C21EB00886270 /* SearchViewController.swift */,
+				EC6DB1512A169A3200C5CEAD /* CreateRecipeViewController.swift */,
+				ECAF42022A15735000300D3E /* CalendarRecipeViewController.swift */,
+				ECD05C942A143FDF00B31414 /* RecipeViewController.swift */,
+				EC6DB14B2A15B0DF00C5CEAD /* SettingsViewController.swift */,
+				ECAF41FA2A148CF100300D3E /* DatePickerViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EC6DB1562A16DFAB00C5CEAD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D8BBE2A0C4CD700886270 /* SearchResultCell.xib */,
+				EC2D8BC62A13E3E300886270 /* NothingFoundCell.xib */,
+				EC2D8BC42A13DEC300886270 /* LoadingCell.xib */,
+				ECAF41F72A14871F00300D3E /* IngredientCell.xib */,
+				ECAF42002A152E6700300D3E /* NothingSavedCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EC6DB1572A16DFD000C5CEAD /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D8BAC2A0C1D9F00886270 /* MealMap.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		EC6DB1582A16DFF600C5CEAD /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				EC66CFA32A14211600F40A69 /* UIImageView+DownloadImage.swift */,
+				EC2D8BC02A0C53B200886270 /* SearchResultCell.swift */,
+				ECAF41FC2A14C5BA00300D3E /* HudView.swift */,
+				ECAF41F62A14871F00300D3E /* IngredientCell.swift */,
+				EC2D8BBC2A0C485800886270 /* SearchResult.swift */,
+				EC6DB14F2A15F0E000C5CEAD /* String+SplitArray.swift */,
+				ECAF41FE2A14C75300300D3E /* Functions.swift */,
+				EC6DB1532A16C9AA00C5CEAD /* NutritionResult.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC2D8B9F2A0C1D9F00886270 /* MealMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2D8BB72A0C1DA000886270 /* Build configuration list for PBXNativeTarget "MealMap" */;
+			buildPhases = (
+				EC2D8B9C2A0C1D9F00886270 /* Sources */,
+				EC2D8B9D2A0C1D9F00886270 /* Frameworks */,
+				EC2D8B9E2A0C1D9F00886270 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MealMap;
+			productName = MealMap;
+			productReference = EC2D8BA02A0C1D9F00886270 /* MealMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC2D8B982A0C1D9F00886270 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					EC2D8B9F2A0C1D9F00886270 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = EC2D8B9B2A0C1D9F00886270 /* Build configuration list for PBXProject "MealMap" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC2D8B972A0C1D9F00886270;
+			productRefGroup = EC2D8BA12A0C1D9F00886270 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC2D8B9F2A0C1D9F00886270 /* MealMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC2D8B9E2A0C1D9F00886270 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2D8BB32A0C1DA000886270 /* LaunchScreen.storyboard in Resources */,
+				EC2D8BB02A0C1DA000886270 /* Assets.xcassets in Resources */,
+				EC2D8BC72A13E3E300886270 /* NothingFoundCell.xib in Resources */,
+				EC2D8BBF2A0C4CD700886270 /* SearchResultCell.xib in Resources */,
+				EC2D8BC52A13DEC300886270 /* LoadingCell.xib in Resources */,
+				ECAF41F92A14871F00300D3E /* IngredientCell.xib in Resources */,
+				EC2D8BAB2A0C1D9F00886270 /* Main.storyboard in Resources */,
+				ECAF42012A152E6700300D3E /* NothingSavedCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC2D8B9C2A0C1D9F00886270 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6DB1542A16C9AA00C5CEAD /* NutritionResult.swift in Sources */,
+				EC2D8BC32A0C6E2E00886270 /* CalendarViewController.swift in Sources */,
+				EC2D8BC12A0C53B200886270 /* SearchResultCell.swift in Sources */,
+				EC2D8BBB2A0C21EB00886270 /* SearchViewController.swift in Sources */,
+				ECAF42032A15735000300D3E /* CalendarRecipeViewController.swift in Sources */,
+				ECAF41FF2A14C75300300D3E /* Functions.swift in Sources */,
+				EC2D8BA82A0C1D9F00886270 /* HomeViewController.swift in Sources */,
+				ECD05C952A143FDF00B31414 /* RecipeViewController.swift in Sources */,
+				EC6DB14C2A15B0DF00C5CEAD /* SettingsViewController.swift in Sources */,
+				EC6DB1522A169A3200C5CEAD /* CreateRecipeViewController.swift in Sources */,
+				EC2D8BAE2A0C1D9F00886270 /* MealMap.xcdatamodeld in Sources */,
+				ECAF41F82A14871F00300D3E /* IngredientCell.swift in Sources */,
+				EC66CFA42A14211600F40A69 /* UIImageView+DownloadImage.swift in Sources */,
+				ECAF41FB2A148CF100300D3E /* DatePickerViewController.swift in Sources */,
+				EC6DB1502A15F0E000C5CEAD /* String+SplitArray.swift in Sources */,
+				EC2D8BA42A0C1D9F00886270 /* AppDelegate.swift in Sources */,
+				EC2D8BBD2A0C485800886270 /* SearchResult.swift in Sources */,
+				EC2D8BA62A0C1D9F00886270 /* SceneDelegate.swift in Sources */,
+				ECAF41FD2A14C5BA00300D3E /* HudView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC2D8BA92A0C1D9F00886270 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2D8BAA2A0C1D9F00886270 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC2D8BB12A0C1DA000886270 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC2D8BB22A0C1DA000886270 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC2D8BB52A0C1DA000886270 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC2D8BB62A0C1DA000886270 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC2D8BB82A0C1DA000886270 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealMap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Razin.JC.MealMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC2D8BB92A0C1DA000886270 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealMap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Razin.JC.MealMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC2D8B9B2A0C1D9F00886270 /* Build configuration list for PBXProject "MealMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2D8BB52A0C1DA000886270 /* Debug */,
+				EC2D8BB62A0C1DA000886270 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC2D8BB72A0C1DA000886270 /* Build configuration list for PBXNativeTarget "MealMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2D8BB82A0C1DA000886270 /* Debug */,
+				EC2D8BB92A0C1DA000886270 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC2D8BAC2A0C1D9F00886270 /* MealMap.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC2D8BAD2A0C1D9F00886270 /* MealMap.xcdatamodel */,
+			);
+			currentVersion = EC2D8BAD2A0C1D9F00886270 /* MealMap.xcdatamodel */;
+			path = MealMap.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EC2D8B982A0C1D9F00886270 /* Project object */;
+}
