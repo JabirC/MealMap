@@ -2,7 +2,7 @@
 //  String+SplitArray.swift
 //  MealMap
 //
-//  Created by Jabir Chowdhury on 5/18/23.
+//  Created by Jabir Chowdhury
 //
 
 import Foundation
