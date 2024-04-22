@@ -63,4 +63,9 @@ class CalendarViewController: UIViewController, NSFetchedResultsControllerDelega
         }
     }
     
+    deinit {
+      fetchedResultsController.delegate = nil
+    }
+    
+   
 }
