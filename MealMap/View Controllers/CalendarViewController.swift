@@ -90,3 +90,12 @@ class CalendarViewController: UIViewController, NSFetchedResultsControllerDelega
 
 
 }
+
+extension CalendarViewController: UICalendarSelectionSingleDateDelegate {
+    func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
+        let dateSelected = Calendar.current.date(from: dateComponents!)
+        print(dateSelected as Any)
+        performSegue(withIdentifier: "ShowDay", sender: dateSelected)
+    }
+}
+
