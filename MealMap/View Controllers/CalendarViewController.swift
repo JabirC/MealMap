@@ -67,5 +67,26 @@ class CalendarViewController: UIViewController, NSFetchedResultsControllerDelega
       fetchedResultsController.delegate = nil
     }
     
-   
+    // MARK: - Navigation
+    override func prepare(
+      for segue: UIStoryboardSegue,
+      sender: Any?
+    ){
+    if segue.identifier == "ShowDay" {
+        let controller = segue.destination as! CalendarRecipeViewController
+        controller.dateValue = sender as? Date
+        controller.managedObjectContext = managedObjectContext
+      }
+    }
+    
+    // MARK: - Helper methods
+    func performFetch() {
+      do {
+        try fetchedResultsController.performFetch()
+      } catch {
+        fatalCoreDataError(error)
+      }
+    }
+
+
 }
