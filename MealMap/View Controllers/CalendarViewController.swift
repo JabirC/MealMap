@@ -99,3 +99,23 @@ extension CalendarViewController: UICalendarSelectionSingleDateDelegate {
     }
 }
 
+extension CalendarViewController: UICalendarViewDelegate {
+    func calendarView(_ calendarView: UICalendarView, decorationFor dateComponents: DateComponents) -> UICalendarView.Decoration? {
+
+        
+        var specialDate = false
+        dateList.forEach{ Date in
+            let components = Calendar.current.dateComponents([.year, .month, .day], from: Date)
+            if(dateComponents.year == components.year && dateComponents.month == components.month && dateComponents.day == components.day){
+                specialDate = true
+            }
+        }
+        
+        if(specialDate == true){
+            return UICalendarView.Decoration.default(color: .systemRed, size: .large)
+        }
+
+        
+    return nil
+    }
+}
