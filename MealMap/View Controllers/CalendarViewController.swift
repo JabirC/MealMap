@@ -11,5 +11,28 @@ import UIKit
 import CoreData
 
 class CalendarViewController: UIViewController, NSFetchedResultsControllerDelegate{
+    var managedObjectContext: NSManagedObjectContext!
+    var dateList = [Date]()
+    let calendarView = UICalendarView()
+    lazy var fetchedResultsController: NSFetchedResultsController<Meal> = {
+      let fetchRequest = NSFetchRequest<Meal>()
 
+      let entity = Meal.entity()
+      fetchRequest.entity = entity
+
+      let sort = NSSortDescriptor(key: "date", ascending: true)
+      fetchRequest.sortDescriptors = [sort]
+        
+      fetchRequest.fetchBatchSize = 20
+
+      let fetchedResultsController = NSFetchedResultsController(
+        fetchRequest: fetchRequest,
+        managedObjectContext: self.managedObjectContext,
+        sectionNameKeyPath: nil,
+        cacheName: nil)
+
+      fetchedResultsController.delegate = self
+      return fetchedResultsController
+    }()
+    
 }
