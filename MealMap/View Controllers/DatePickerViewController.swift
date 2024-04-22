@@ -70,4 +70,12 @@ class DatePickerViewController: UIViewController {
 
 }
 
+extension DatePickerViewController: UICalendarSelectionSingleDateDelegate {
+    func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
+        doneBarButton.isEnabled = true
+        dateSelected = Calendar.current.date(from: dateComponents!)
+        print(dateSelected as Any)
+    }
+}
+
 
