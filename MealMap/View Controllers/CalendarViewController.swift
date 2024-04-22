@@ -35,4 +35,32 @@ class CalendarViewController: UIViewController, NSFetchedResultsControllerDelega
       return fetchedResultsController
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        performFetch()
+        
+        calendarView.calendar = Calendar(identifier: .gregorian)
+        calendarView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(calendarView)
+        NSLayoutConstraint.activate([
+
+             calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+             calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+             calendarView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+             calendarView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        ])
+        calendarView.tintColor = .systemOrange
+        
+        let selection = UICalendarSelectionSingleDate(delegate: self)
+        calendarView.selectionBehavior = selection
+        
+        calendarView.delegate = self
+        // Do any additional setup after loading the view.
+        
+        
+        fetchedResultsController.fetchedObjects!.forEach { Meal in
+            dateList.append(Meal.date!)
+        }
+    }
+    
 }
