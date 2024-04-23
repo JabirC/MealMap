@@ -86,6 +86,34 @@ class CalendarRecipeViewController: UIViewController{
         }
     }
     
- 
+    // MARK: - Helper methods
+    func performFetch() {
+      do {
+        try fetchedResultsController.performFetch()
+      } catch {
+        fatalCoreDataError(error)
+      }
+    }
+    
+    @IBAction func create() {
+        performSegue(withIdentifier: "CreateRecipe", sender: dateValue)
+    }
+}
+
+// MARK: - Table View Delegate
+extension CalendarRecipeViewController: UITableViewDelegate,
+                                        UITableViewDataSource {
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int) -> Int {
+            if fetchedResultsController.sections![0].numberOfObjects == 0{
+                return 1
+            }
+            else {
+                return fetchedResultsController.sections![0].numberOfObjects
+            }
+        }
+    
+   
   }
 
