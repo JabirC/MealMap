@@ -170,3 +170,85 @@ extension CalendarRecipeViewController: UITableViewDelegate,
 
 
 
+// MARK: - NSFetchedResultsController Delegate Extension
+extension CalendarRecipeViewController:
+    NSFetchedResultsControllerDelegate {
+    func controllerWillChangeContent(
+        _ controller:
+    NSFetchedResultsController<NSFetchRequestResult> ){
+        print("*** controllerWillChangeContent")
+        tableView.beginUpdates()
+      }
+      func controller(
+        _ controller:
+    NSFetchedResultsController<NSFetchRequestResult>,
+        didChange anObject: Any,
+        at indexPath: IndexPath?,
+        for type: NSFetchedResultsChangeType,
+        newIndexPath: IndexPath?
+    ){
+    switch type { case .insert:
+          print("*** NSFetchedResultsChangeInsert (object)")
+        if(fetchedResultsController.sections![0].numberOfObjects == 1){
+            changed = true
+            tableView.reloadData()
+        }
+        else{
+            tableView.insertRows(at: [newIndexPath!], with: .fade)
+        }
+        case .delete:
+          print("*** NSFetchedResultsChangeDelete (object)")
+          tableView.deleteRows(at: [indexPath!], with: .fade)
+        case .update:
+          print("*** NSFetchedResultsChangeUpdate (object)")
+          if let cell = tableView.cellForRow(
+            at: indexPath!) as? SearchResultCell {
+            let meal = controller.object(
+              at: indexPath!) as! Meal
+              
+              cell.recipeNameLabel.text = meal.name
+              cell.calorieLabel.text = meal.cal
+              
+              cell.artworkImageView.layer.cornerRadius = 50
+              if let smallURL = URL(string: meal.imageLink!) {
+                  downloadTask = cell.artworkImageView.loadImage(url: smallURL)
+              }
+    }
+        case .move:
+          print("*** NSFetchedResultsChangeMove (object)")
+          tableView.deleteRows(at: [indexPath!], with: .fade)
+          tableView.insertRows(at: [newIndexPath!], with: .fade)
+        @unknown default:
+          print("*** NSFetchedResults unknown type")
+        }
+    }
+      func controller(
+        _ controller:
+    NSFetchedResultsController<NSFetchRequestResult>,
+        didChange sectionInfo: NSFetchedResultsSectionInfo,
+        atSectionIndex sectionIndex: Int,
+        for type: NSFetchedResultsChangeType
+    ){
+    switch type { case .insert:   print("*** NSFetchedResultsChangeInsert (section)")
+        tableView.insertSections(
+          IndexSet(integer: sectionIndex), with: .fade)
+      case .delete:
+        print("*** NSFetchedResultsChangeDelete (section)")
+        tableView.deleteSections(
+          IndexSet(integer: sectionIndex), with: .fade)
+      case .update:
+        print("*** NSFetchedResultsChangeUpdate (section)")
+      case .move:
+        print("*** NSFetchedResultsChangeMove (section)")
+      @unknown default:
+        print("*** NSFetchedResults unknown type")
+      }
+  }
+    func controllerDidChangeContent(
+      _ controller:
+  NSFetchedResultsController<NSFetchRequestResult> ){
+      print("*** controllerDidChangeContent")
+      tableView.endUpdates()
+    }
+  }
+
