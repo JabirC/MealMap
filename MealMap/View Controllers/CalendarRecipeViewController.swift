@@ -114,6 +114,59 @@ extension CalendarRecipeViewController: UITableViewDelegate,
             }
         }
     
-   
-  }
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            if fetchedResultsController.sections![0].numberOfObjects  == 0 && !changed  {
+              return tableView.dequeueReusableCell(
+                withIdentifier: "NothingSavedCell",
+                for: indexPath)
+            } else {
+              let cell = tableView.dequeueReusableCell(
+                withIdentifier: "SearchResultCell",
+                for: indexPath) as! SearchResultCell
+                
+                let meal = fetchedResultsController.object(at: indexPath)
+                cell.recipeNameLabel.text = meal.name
+                cell.calorieLabel.text = meal.cal
+                cell.artworkImageView.layer.cornerRadius = 50
+                
+                
+                if let smallURL = URL(string: meal.imageLink!) {
+                    downloadTask = cell.artworkImageView.loadImage(url: smallURL)
+                    print(downloadTask as Any)
+                }
+                
+                return cell
+            }
+        }
+    
+    
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath){
+            tableView.deselectRow(at: indexPath, animated: true)
+            let meal = fetchedResultsController.object(at: indexPath)
+            let recipe = SearchResult(meal: meal)
+            performSegue(withIdentifier: "ShowCalendarRecipe", sender: recipe)
+        }
+    
+    func tableView(
+        _ tableView: UITableView,
+        willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+            if fetchedResultsController.sections![0].numberOfObjects == 0 {
+                return nil
+            } else {
+                return indexPath
+            }
+        }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if fetchedResultsController.sections![0].numberOfObjects == 0{
+            return 300.0
+        }
+        return 140.0;//Choose your custom row height
+    }
+}
+
+
 
