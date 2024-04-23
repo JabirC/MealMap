@@ -42,6 +42,33 @@ class CalendarRecipeViewController: UIViewController{
       return fetchedResultsController
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        performFetch()
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, YYYY"
+        let dateString = dateFormatter.string(from: dateValue)
+        dayDate.text = dateString
+        
+        
+        
+        
+        
+        var cellNib = UINib(nibName: "SearchResultCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier:
+                            "SearchResultCell")
+        
+        
+        cellNib = UINib(
+          nibName: "NothingSavedCell",
+          bundle: nil)
+        tableView.register(
+          cellNib,
+          forCellReuseIdentifier: "NothingSavedCell")
+    }
+    
    
   }
 
