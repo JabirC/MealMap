@@ -69,6 +69,23 @@ class CalendarRecipeViewController: UIViewController{
           forCellReuseIdentifier: "NothingSavedCell")
     }
     
-   
+    // MARK: - Navigation
+    override func prepare(
+      for segue: UIStoryboardSegue,
+      sender: Any?
+    ){
+    if segue.identifier == "ShowCalendarRecipe" {
+        let controller = segue.destination as! RecipeViewController
+        controller.recipe = sender as? SearchResult
+        controller.managedObjectContext = managedObjectContext
+      }
+    if segue.identifier == "CreateRecipe" {
+            let controller = segue.destination as! CreateRecipeViewController
+            controller.dateValue = sender as? Date
+            controller.managedObjectContext = managedObjectContext
+        }
+    }
+    
+ 
   }
 
